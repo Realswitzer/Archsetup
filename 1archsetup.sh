@@ -1,10 +1,4 @@
 #!/bin/sh
-EFIDIR="/sys/firmware/efi/efivars"
-if [! -d "$EFIDIR" ]; then
-  echo "${EFIDIR} does not exist! Set the firmware to UEFI."
-  exit
-fi
-
 timedatectl set-ntp true
 echo "1. Select gpt"
 echo "2. Make a new 500M part, select EFI -- sda1"
